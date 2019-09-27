@@ -26,7 +26,7 @@ namespace YouLearn.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("api/usuario/Adicionar")]
+        [Route("api/v1/usuario/Adicionar")]
 
         public async Task<IActionResult> Adicionar([FromBody]AdicionarUsuarioRequest request)
         {
