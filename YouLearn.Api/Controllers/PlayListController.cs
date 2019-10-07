@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -24,6 +25,7 @@ namespace YouLearn.Api.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
+        [Authorize("Bearer")]
         [HttpGet]
         [Route("api/v1/PlayList/Listar")]
 
@@ -50,6 +52,7 @@ namespace YouLearn.Api.Controllers
 
         }
 
+        [Authorize("Bearer")]
         [HttpPost]
         [Route("api/v1/PlayList/Adicionar")]
         public async Task<IActionResult> Adicionar([FromBody]AdicionarPlayListRequest request)
@@ -73,6 +76,7 @@ namespace YouLearn.Api.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpDelete]
         [Route("api/v1/PlayList/Excluir/{id:Guid}")]
         public async Task<IActionResult> Excluir(Guid id)

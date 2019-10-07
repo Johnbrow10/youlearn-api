@@ -53,7 +53,7 @@ namespace YouLearn.Api
             {
                 Audience = AUDIENCE,
                 Issuer = ISSUER,
-                Seconds = int.Parse(TimeSpan.FromDays(1).TotalSeconds.ToString())
+                Seconds = int.Parse(TimeSpan.FromDays(2).TotalSeconds.ToString())
             };
             services.AddSingleton(tokenConfiguracao);
 

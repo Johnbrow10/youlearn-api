@@ -57,6 +57,7 @@ namespace YouLearn.Api.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpPost]
         [Route("api/v1/Video/Adicionar")]
         public async Task<IActionResult> Adicionar([FromBody]AdicionarVideoRequest request)

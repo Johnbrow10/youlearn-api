@@ -63,7 +63,7 @@ namespace YouLearn.Api.Controllers
                     new[]
                     {
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
-            // captura a resposta "Id e nome" da api coloca em objecto e serializa em um Json para se ler depois de pegar o Token.
+                         // captura a resposta "Id e nome" da api coloca em objecto e serializa em um Json para se ler depois de pegar o Token.
                         new Claim("Usuario",JsonConvert.SerializeObject(response))
                     });
 

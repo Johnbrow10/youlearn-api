@@ -12,7 +12,7 @@ namespace YouLearn.Api.Seguranca
 
         public SigningConfiguracao()
         {
-            SigningCredentials = new SigningCredentials(_signinKey, SecurityAlgorithms.HmacSha256); ;
+            SigningCredentials = new SigningCredentials(_signinKey, SecurityAlgorithms.HmacSha256);
         }
 
     }
